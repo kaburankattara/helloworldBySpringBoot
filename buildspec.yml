@@ -11,4 +11,4 @@ phases:
 
 artifacts:
   files:
-    - ./build/libs/helloworld-0.0.1-SNAPSHOT.jar
+    - target/helloworld-0.0.1-SNAPSHOT.jar
