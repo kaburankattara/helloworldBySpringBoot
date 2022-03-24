@@ -11,7 +11,7 @@ phases:
 
   post_build:
     commands:
-      - jar -uf ./build/libs/helloworld-0.0.1-SNAPSHOT.jar .ebextensions
+      - jar -uf ./build/libs/helloworld-0.0.1-SNAPSHOT.jar appspec.yml
 
 artifacts:
   files:
