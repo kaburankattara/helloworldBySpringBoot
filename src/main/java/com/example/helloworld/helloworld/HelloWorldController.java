@@ -6,11 +6,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-public class HelloworldController {
+public class HelloWorldController {
 
-    private HelloworldService helloworldService;
+    private HelloWorldService helloworldService;
 
-    public HelloworldController(@Autowired HelloworldService helloworldService) {
+    @Autowired
+    public HelloWorldController(HelloWorldService helloworldService) {
         this.helloworldService = helloworldService;
     }
 

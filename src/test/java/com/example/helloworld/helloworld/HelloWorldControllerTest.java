@@ -8,16 +8,17 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
+
 // SpringBootベースのテストを実行するテストクラスで指定できるアノテーション。
 @SpringBootTest
 // MockMvcの自動構成を有効にして構成するためにテストクラスに適用できる注釈。
 @AutoConfigureMockMvc
-public class HelloworldControllerTest {
+public class HelloWorldControllerTest {
 
     @Test
     // MockMvc ↓
     // サーバー側のSpringMVCテストサポートのメインエントリポイント。
-    void sampleTest(@Autowired MockMvc mvc) throws Exception {
+    void HelloWorldが取得されることを確認(@Autowired MockMvc mvc) throws Exception {
 
         //リクエストを実行し、結果に対して期待を表明するなど、
         // さらなるアクションを連鎖させることができるタイプを返します。
@@ -29,6 +30,6 @@ public class HelloworldControllerTest {
 
                 // ResultMatcherベースの結果アクションの静的ファクトリメソッド。
                 .andExpect(MockMvcResultMatchers.status().isOk())
-                .andExpect(MockMvcResultMatchers.content().string("helloworld"));
+                .andExpect(MockMvcResultMatchers.content().string("HelloWorld"));
     }
 }
